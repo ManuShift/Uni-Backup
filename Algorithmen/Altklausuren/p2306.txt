@@ -1,0 +1,67 @@
+Nachklausur - Algorithmen
+09.06.2020
+Kaufmann, Kuckuk, Schneck 
+
+Aufgabe 1 REKURSION 
+T(n) = 3T(n/3) + n log(Basis 3)(n)
+
+a) Zeigen Sie, dass das Mastertheorem nicht anwendbar ist. 
+b) Rechnen sie die geschlossene Form mit n=3^k, T(1)=0.
+
+Aufgabe 2 MEDIAN 
+Gegeben sei ein AVL-Baum T. (... an den Rest erinnere ich mich nicht mehr) 
+
+Geben sie einen Algorithmus in Pseudocode an, der den Median der Elemente in T in Laufzeit log(n) findet. 
+Zeigen sie die Korrektheit. 
+
+Aufgabe 3 DYNAMISCHES PROGRAMMIEREN 
+Irgendwas mit einer Matrix... 
+
+Aufgabe 4 HASHING 
+a) Werte aus S in eine leere Hastabelle der Größe 5 einfügen, mit Verkettung. h(x)= 2x + 1 (mod 5) 
+b) Für welche Werte a und b in der Hashfunktion h(a,b,m)(x) = 2x + 1 mod m; mit m=9, enstehen keine Kollisionen
+beim einfügen der Elemente aus a) in eine leere Hashtabelle? 
+c) was ist die worst-case Laufzeit für das Suchen, Einfügen, Löschen in
+   einer Hashtabelle (Verkettung) wenn es sich um eine unsortierte Liste handelt? 
+d) was ist die worst-case Laufzeit für das Suchen, Einfügen, Löschen in
+   einer Hashtabelle (Verkettung) wenn es sich um eine sortierte Liste bzw. zu sortierende Liste handelt?
+
+Aufgabe 5 BÄUME
+Gegeben sei ein ungerichteter (zusammenhängender) Baum T in Adjanzenzlistendarstellung.
+Normalerweise enthält ein Baum keine Zykel. Wenn jedoch ein Baum genau einen Zykel enthält, so nennt man diesen
+"Pseudobaum". 
+
+Entwerfen sie einen Algorithmus, der ausgibt, ob ein Baum ein Pseudobaum ist (also einen Zykel enthält).
+Erklären sie ihr Vorgehen und zeigen Sie die Laufzeit ihres Algorithmus. 
+
+Aufgabe 6 MULTIPLE CHOICE 
+12 Fragen mit ja 0.5 Punkten (mindestens 1 Antwort ist richtig) 
+
+Bsp: 
+Die Vergleiche in einem Binären baum sind: 
+- Immer log n 
+- manchmal log n 
+- nie log n 
+- keins der oberen
+
+Welche der Rekursionen hat die kürzeste Laufzeit? (Ang. T(1)=1) 
+- Wahl zw. 4 Rekustionsgleichungen
+
+Wie verhält sich der Median zum Mittelwert immer? 
+- Median < Mittelwert 
+- Median = Mittelwert
+- Median > Mittelwert 
+- keins 
+
+Was sind zutreffende Kriterien eines (a,b)-Baums? 
+- Die inneren Knoten haben maximum b Kinder 
+- Die Blätter haben minimum a Kinder
+- Die Wurzel hat mindestens a Kinder 
+- Die Blätter haben alle die gleiche Tiefe
+
+Ist ein AVL-Baum ein binärer Baum? 
+
+Welche Kriterien treffen auf Binäre suchbäume zu: 
+- n-1 Kanten
+-... 
+

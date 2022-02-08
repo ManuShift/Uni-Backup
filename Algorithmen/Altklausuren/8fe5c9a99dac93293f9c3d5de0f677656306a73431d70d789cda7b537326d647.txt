@@ -1,0 +1,79 @@
+Nachklausur Algorithmen WS 2021
+Prof. Kaufmann
+
+Aufgabe 1
+Komplexität f in O(g(n))
+- log(n!^n)
+- 3n^3
+- n^2 * 2^n
+- n * 3^n
+- log (...)
+
+Bestimme Ordung der Komplexität und Beweise diese Ordnung
+
+
+Aufgabe 2
+Hashing
+a) Hashing (3x + 4) mod 9
+Werte in Hashingtabelle einfüllen
+b) Beliebige Hashing Funktion h_a,b(x) mit (ax + b) mod 13 gegeben.
+Kollidieren die Einträge zwangsläufig? 
+
+Antwort: Ja, da 1 und 14 auf den gleichen Hashwert abgebildet werden, da 14 mod 13 = 1
+c) 
+Wenn Werte aus einer Hashtablle mit offener Addressierung gelöscht werden, müssen Sonderzeichen eingefügt werden.
+Wie kann man verhindern, dass die Sonderzeichen über Hand nehmen. Also durch die Löschung von Einträgen die Hashingtabelle voller
+Sonderzeichen ist. Erkläre wieso diese effizient sind
+
+Antwort: 1) Rehashing. Regelmäßiges Rehashing löscht die Sonderzeichen und ordnet die Tabelle neu. 
+Dadurch wird verhindert, dass die Sonderzeichen einen zu großen Teil der Tabelle ausfüllen.
+Rehasing ist effizient, weil sich das Rehasing amortisiert, also wenn alle n Lösch und Einfügeoperationen 
+Rehasing stattfindet, bleibt die Laufzeit linear-
+2) Hashing mit Verkettung, macht es möglich mehrere Einträge in ein Hashfeld zu schreiben. Wenn sortierte Bäume verwendet werden
+ist die Laufzeit O(log n) für Einfügen, Löschen und Aufrufen. wenn Listen verwendet werden, O(n) für das suchen, aber O(1) fürs einfügen.
+Da aber so oder so selten alle Werte in das gleiche Hashfeld eingefügt werden, bleibt die Lauzeit für einen begrenzten Belegungsfaktor auch 
+Linear.
+
+
+Aufgabe 3
+Graphzentralität
+Ungewichteter, ungerichteter Graph G = (V,E)
+a) Algorithmus der den Knoten mit der größten Graphzentralität bestimmt. Laufzeit (|V| * (|V| * |E|)) 
+Beschreiben und Pseudocode schreiben
+b) Begründen sie Laufzeit und Korrektheit ihres Algorithmus
+
+
+Antwort:
+Lösung sehr ähnlich zu Übungsblatt. Durchlaufe den Graph von allen Knoten mit DFS. Speichere jeweils die länge des längsten Weges. 
+Bilde das Maximum über alle Knoten (längsten Weg des DFS) und gebe den Knoten zurück, welcher am wenigsten Kanten.
+Laufzeit und Korrektheit ähnlich wie DFS
+
+
+Aufgabe 4
+Code gegeben, welcher sortierten Array durchsucht "Wurzelsuche"
+a) Wurzelsuche auf gegebenen Array durchführen. Werte n, oben und unten bei jedem Durchlauf der while Schleife aufschreiben.
+b) Komplexität berechnen mit N = 2^2^k. Es muss gezeigt werden, dass die Komplexität die Wurzel von N ist.
+ Es werden immer N^(1/2) Werte betrachtet und das Intervall auf Größe N^(1/2) eingeschränkt
+Antwort: A(N) = A(2^2^k) = 2^k + A(2^k) =2^k + (2^(k/2) + A(2^(k/2)) = ... = 2^k + 2^(k/2) + 2^(k/4) + ... + 2^(k/k) + A(2^(k/k)
+= Summe bilden von i = 0 bis i = k mit 2^i. Da A(2^(k/k)) = A^(2) = 2, bildet sich eine Summe +1
+= endliche geometrische Reihe mit q = 2 anwenden, damit bildet sich 1 + (2^(k+1) - 1)/(2-1) = 1 + 2^(k+1) - 1 = 2*2^k = 2*(N^(1/2)) -> Aussage bewiesen. 
+
+Aufgabe 5
+Dynamisches Programmieren
+
+Aufgabe 6
+(2,4) Baum 
+a) Label einfügen (Einfach die Label in einen (2,4) Baum eintragen, bei dem die Blätter gegeben sind.
+Label der unteren Knoten sind Beispielsweise:
+2 3 5 7 , 11 13 , 17 20 22
+b) Knoten einfügen z.B. 28, 15, 31
+Für Ein Label muss ein Konten gespalten werden, sonst ganz normal, wie in der Vorlesung
+c) Knoten löschen z.B. 13 und 11
+Für den gelöschten Knoten müssen Kinder vom Geschwisterknoten gestohlen werden, da dieser >=3 Kinder besitzt.
+d) Algorithmus der (2,4) Baum in B-Baum von Ordnung 2 in Linearzeit umwandelt 
+
+
+
+
+
+

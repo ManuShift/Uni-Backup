@@ -1,0 +1,41 @@
+Eine Aufgabe darf gestrichen werden.
+
+A1 Rekursion (6P)
+T(1) = 0
+T(n) = 7/8 T (7/8 n) +7/8n
+n = (8/7)^k
+
+Möglichst genaue Funktion + Korrekheit dieser ohne Mastertheorem
+
+A2 Dynamisches Programmieren (6P)
+Logarithmus, gebe dynamischen Code an, der [das und das] macht.
+
+A3 Tiefensuche (6P)
+a) dif + com num angeben für jeden Knoten
+b) Menge der Vorwärts-, Baum-, Rückwärts-, Querknoten angeben
+c) Wo kann es zu einem Zykel kommen? T, F, B, C = Vorwärts-, Baum-, Rückwärts-, Querknoten; J/N
+	T	F	B
+C	N	N	N
+B	J	J
+F	N?
+
+A4 Beweise zu MST (6P)
+Beweise oder widerlege:
+a) Von jedem Knoten ist min 1 billigste Kante enthalten: Richtig, kp warum
+b) Die Maximumkante ist nie in einem MST enthalten: Falsch, wenn nur 1 Kante => max Kante
+c) Minimales Ersparnis an Find aufrufen bei Kruskal mit dem Ergebnis aus a)
+
+A5 Hashing (6P)
+a) i) alle auf einen Hashwert: a,b,m angeben zB a=2,b=0,m=2
+   ii) alle auf verschiedene Hashwerte: a,b,m angeben zB a=1,b=0,c=100
+b) g_i(x) = h_(1 0 5) + i mod 5 bei Kollision verschieden fortfahren
+i) Verkettetes Hashing mit g_0 Hashtabelle angeben
+ii) Offenes Hashing mit (g_i)_(i>=0)
+c) m = 5 geht nicht, beweise warum
+d) kleinstes m das möglich ist, gib a,b,m an
+
+A6 (2,4)-Baum (6P)
+a) Baum Werte einsetzen: 2,4 15,	87,92
+b) Zahl 16 einfügen mit Beschreibung was man tut
+c) Zahl 16 löschen mit Beschreibung was man tut
+d) Was kommt nun raus? Beschreibe den Effekt. Lösung: Gleiche Elemente trotzdem unterschiedliche Bäume, dh eine Elementmenge kann veschiedene Bäume haben.
